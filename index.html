@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>fullpage</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <Fullpage :page="5" :background="background">
+        <!-- 通过slot-scope的prop只要里面使用prop.作用域都是Fullpage这个组件 -->
+        <template slot-scope="prop" slot="slot1">
+          <page1 :state="prop.state"></page1>
+        </template>
+        <template slot-scope="prop" slot="slot2">
+          <page1 :state="prop.state"></page1>
+        </template>
+      </Fullpage>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
